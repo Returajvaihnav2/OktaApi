@@ -16,7 +16,6 @@ namespace okta
 {
     public class Startup
     {
-
         public void Configuration(IAppBuilder app)
         {
             var authority = "https://trial-5329408.okta.com/oauth2/default";
