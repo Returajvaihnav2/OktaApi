@@ -11,7 +11,6 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Jwt;
 using System.Threading.Tasks;
 [assembly: OwinStartup(typeof(okta.Startup))]
-
 namespace okta
 {
     public class Startup
