@@ -20,9 +20,9 @@ export default class SugarLevelService {
 
   save(sugarLevel: SugarLevel): Observable<SugarLevel> {
     let result: Observable<SugarLevel>;
-    if (sugarLevel.id) {
+    if (sugarLevel.Id) {
       result = this.http.put<SugarLevel>(
-        `${this.SUGARLEVELS_API}/${sugarLevel.id}`,
+        `${this.SUGARLEVELS_API}/${sugarLevel.Id}`,
         sugarLevel
       );
     } else {

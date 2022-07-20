@@ -1,6 +1,6 @@
 export default class SugarLevel {
-    id: number =0;
-    value: number=0;
-    description: string ='';
-    measuredAt: Date=new Date();
+    Id: number =0;
+    Value: number=0;
+    Description: string ='';
+    MeasuredAt: Date=new Date();
   }

@@ -24,10 +24,10 @@ export class SugarLevelEditComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sugarLevelForm=new FormGroup({
-      description:new FormControl(),
-      id:new FormControl(),
-      value:new FormControl(),
-      measuredAt:new FormControl(new Date()),
+      Description:new FormControl(),
+      Id:new FormControl(),
+      Value:new FormControl(),
+      MeasuredAt:new FormControl(new Date()),
     });
     this.sub = this.route.params.subscribe(params => {
       const id = params['id'];
@@ -35,8 +35,8 @@ export class SugarLevelEditComponent implements OnInit, OnDestroy {
         this.sugarLevelService.get(id).subscribe((sugarLevel: any) => {
           if (sugarLevel) {
             this.sugarLevel = sugarLevel;
-            this.sugarLevel.measuredAt = new Date(
-              this.sugarLevel.measuredAt
+            this.sugarLevel.MeasuredAt = new Date(
+              this.sugarLevel.MeasuredAt
             );
             this.sugarLevelForm.patchValue(this.sugarLevel);
           } else {

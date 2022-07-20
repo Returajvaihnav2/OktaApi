@@ -2,20 +2,20 @@
     <form (ngSubmit)="save(sugarLevelForm.value)" [formGroup]="sugarLevelForm">
         <mat-card-header>
             <mat-card-title>
-                <h2>{{sugarLevel.value ? 'Edit' : 'Add'}} Sugar Level</h2>
+                <h2>{{sugarLevel.Value ? 'Edit' : 'Add'}} Sugar Level</h2>
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <input type="hidden" formControlName="id" name="id">
+            <input type="hidden" formControlName="Id" name="id">
             <mat-form-field>
-                <input matInput placeholder="Sugar Level Description" formControlName="description" name="description">
+                <input matInput placeholder="Sugar Level Description" formControlName="Description" name="description">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Sugar Level Value" formControlName="value" name="value">
+                <input matInput placeholder="Sugar Level Value" formControlName="Value" name="value">
             </mat-form-field>
 
             <mat-form-field class="col-xs-12">
-                <input matInput formControlName="measuredAt" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="Measured At" name="measuredAt">
+                <input matInput formControlName="MeasuredAt" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="Measured At" name="measuredAt">
                 <owl-date-time #dt2></owl-date-time>
                 <mat-error>
                     Required
@@ -25,7 +25,7 @@
         <mat-card-actions>
             <button mat-raised-button color="primary" type="submit" [disabled]="!sugarLevelForm.valid">Save
         </button>
-            <button mat-raised-button color="secondary" (click)="remove(sugarLevel.id)" *ngIf="sugarLevel.id" type="button">Delete
+            <button mat-raised-button color="secondary" (click)="remove(sugarLevel.Id)" *ngIf="sugarLevel.Id" type="button">Delete
         </button>
             <a mat-button routerLink="/sugarlevel-list">Cancel</a>
         </mat-card-actions>

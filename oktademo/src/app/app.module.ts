@@ -22,6 +22,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { SugarLevelEditComponent } from './sugarlevel-edit/sugarlevel-edit.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 const config = {
   issuer: 'https://trial-5329408.okta.com/oauth2/default',
   clientId: '0oa1jtf4kzwmYNIjR697',
@@ -49,7 +50,8 @@ const oktaAuth = new OktaAuth(config);
     MatInputModule,
     OwlDateTimeModule, OwlNativeDateTimeModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [  { 
     provide: OKTA_CONFIG, 

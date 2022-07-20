@@ -4,7 +4,10 @@
         <mat-list>
             <mat-list-item *ngFor="let sugarLevel of sugarLevels">
                 <h3 mat-line>
-                    <a mat-button [routerLink]="['/sugarlevel-edit', sugarLevel.id]"> - </a>
+                    <a> {{sugarLevel.Description}} </a>
+                    <a> {{sugarLevel.Value}} </a>
+                    <a> {{sugarLevel.MeasuredAt}} </a>
+                    <a mat-button [routerLink]="['/sugarlevel-edit', sugarLevel.Id]"> Edit </a>
                 </h3>
             </mat-list-item>
         </mat-list>
